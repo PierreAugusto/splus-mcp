@@ -1,0 +1,27 @@
+[project]
+name = "splus-mcp"
+version = "0.2.0"
+description = "MCP server para consultar e baixar dados do S-PLUS (splus.cloud)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=2.0",
+    "splusdata>=5.56",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+splus-mcp = "splus_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

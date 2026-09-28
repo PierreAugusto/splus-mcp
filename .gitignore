@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# credenciais e config local
+.env
+.mcp.json
+.claude/
+
+# dados baixados
+splus_downloads/
