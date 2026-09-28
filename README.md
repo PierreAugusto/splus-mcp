@@ -81,3 +81,7 @@ Arquivos baixados vão para `SPLUS_DOWNLOAD_DIR` (padrão `./splus_downloads`).
   "Access denied"). Use `list_data_releases` / `list_tables` para ver o que está liberado.
 - `check_coords` compara com os centros de campo publicados para dr4, dr5 e dr6
   (raio padrão de 1°), então é uma estimativa de cobertura, não um teste de máscara.
+
+## Licença
+
+MIT. Veja [LICENSE](LICENSE).

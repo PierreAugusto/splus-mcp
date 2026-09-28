@@ -3,6 +3,7 @@ name = "splus-mcp"
 version = "0.2.0"
 description = "MCP server para consultar e baixar dados do S-PLUS (splus.cloud)"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.10"
 dependencies = [
     "mcp[cli]>=2.0",
@@ -23,5 +24,5 @@ where = ["src"]
 testpaths = ["tests"]
 
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
