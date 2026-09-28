@@ -1,6 +1,6 @@
 [project]
 name = "splus-mcp"
-version = "0.2.0"
+version = "0.3.0"
 description = "MCP server para consultar e baixar dados do S-PLUS (splus.cloud)"
 readme = "README.md"
 license = "MIT"
@@ -9,6 +9,7 @@ dependencies = [
     "mcp[cli]>=2.0",
     "splusdata>=5.56",
     "python-dotenv",
+    "matplotlib",
 ]
 
 [project.optional-dependencies]
