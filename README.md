@@ -118,12 +118,16 @@ combinar DRs, rode `compare_releases` no seu próprio campo.
 
 ```bash
 .venv/bin/pip install -e ".[dev]"
-.venv/bin/pytest                       # unitários, offline (rodam no CI)
-.venv/bin/python scripts/smoke_test.py # ao vivo contra o splus.cloud (usa o .env)
+.venv/bin/pytest                              # unitários, offline (rodam no CI)
+.venv/bin/python scripts/smoke_test.py        # ao vivo contra o splus.cloud (usa o .env)
+.venv/bin/python scripts/mcp_session_test.py  # ao vivo, pelo protocolo MCP
 ```
 
 O `smoke_test.py` chama cada tool em todos os catálogos e confere o resultado (esquema,
-fração de contrapartidas, consistência entre DRs, arquivos FITS válidos).
+fração de contrapartidas, consistência entre DRs, arquivos FITS válidos). O
+`mcp_session_test.py` faz o que uma sessão nova do cliente faria: sobe o servidor pelo
+comando do `.mcp.json`, conecta por stdio e chama as 14 tools. Serve para confirmar que o
+cliente vai enxergar a versão atual.
 
 ## Observações
 
