@@ -19,7 +19,6 @@ from splus_mcp.matching import find_coord_columns  # noqa: E402
 from splus_mcp.sed import plot_sed, sed_table  # noqa: E402
 
 DOWNLOAD_DIR = Path(os.environ.get("SPLUS_DOWNLOAD_DIR", "./splus_downloads")).expanduser().resolve()
-DOWNLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 MAX_BATCH_FILES = 2000
 
@@ -63,6 +62,7 @@ def tool(fn):
 
 
 def _unique_path(stem: str, suffix: str, directory: Path = DOWNLOAD_DIR) -> Path:
+    directory.mkdir(parents=True, exist_ok=True)
     stem = "".join(ch if ch.isalnum() or ch in "._+-" else "_" for ch in stem)
     path = directory / f"{stem}{suffix}"
     i = 1
